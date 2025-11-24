@@ -5,7 +5,6 @@ const successEmail = document.querySelector('.success_email');
 const dismissBtn = document.querySelector('.dismiss_btn');
 const invalidText = document.querySelector('.email_invalid');
 const subscribeBtn = document.getElementById('subscribe_btn');
-const cardForm = document.getElementById('card_form');
 const emailInput = document.getElementById('email');
 // Email Regex to validate email
 const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
