@@ -46,10 +46,8 @@ subscribeBtn.addEventListener('click', (e) => {
         hideCardSection();
         showMessageSection();
         successEmail.textContent = emailInput.value;
-        emailInput.value = '';
     } else {
         showInvalidText();
-        emailInput.value = '';
     }
 })
 

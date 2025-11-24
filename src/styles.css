@@ -22,6 +22,7 @@
 }
 /* Global Styles */
 body {
+    background-color: var(--Blue-700);
     font-family: 'Roboto', sans-serif;
 }
 /* Containers Styles */
@@ -39,6 +40,7 @@ body {
     width: 100%;
     max-width: 37.5rem;
     height: 100svh;
+    background-color: var(--White)
 }
 
 .hero_image {
@@ -49,6 +51,7 @@ body {
 /* Card Content Styles */
 .card_content {
     padding: 1.8em 1.8em 0 1.8em;
+    background-color: var(--White)
 }
 
 .card_info {
@@ -118,19 +121,35 @@ body {
     margin-bottom: 1em;
 }
 
+.card_input:invalid {
+    border: 1px solid var(--Red);
+    background-color: rgba(255, 0, 0, 0.08);
+}
+
+.card_input:placeholder-shown {
+    border: 1px solid var(--Grey);
+    background-color: white;
+}
+
+.card_input:invalid {
+    color: var(--Red);
+}
+
 .card_label {
     font-size: 0.8rem;
     font-weight: 400;
     color: var(--Blue-800);
 }
 
-.card_input::placeholder {
-    color: var(--Grey);
-    font-weight: 400;
+.label_wrapper {
+    display: flex;
+    justify-content: space-between;
 }
 
 .email_invalid {
-    display: block;
+    color: var(--Red);
+    font-weight: 700;
+    font-size: 0.8rem;
     font-size: 0.8rem;
     font-weight: 400;
     color: var(--Red);
@@ -143,12 +162,16 @@ body {
     background-color: var(--Blue-800);
     color: var(--White);
     font-size: 1rem;
+    font-family: inherit;
     font-weight: 700;
     cursor: pointer;
+    transition: 0.25s ease;
 }
 
-#subscribe_btn:hover {
-    background-color: var(--Red);
+#subscribe_btn:hover,
+#subscribe_btn:focus
+{
+    background: linear-gradient(to right, #ff5277, #ff7a3d);
 }
 
 /* Mobile Card Success Styles */
@@ -159,6 +182,8 @@ body {
     justify-content: space-between; /* pushes button to bottom */
     min-height: 100vh;
     padding: 2rem;
+
+    background-color: var(--White);
 }
 
 .success_message-wrapper {
@@ -194,13 +219,101 @@ body {
     color: var(--White);
     font-size: 1rem;
     font-weight: 700;
+    font-family: inherit;
     cursor: pointer;
 }
 
+.dismiss_btn:hover,
+.dismiss_btn:focus
+{
+    background: linear-gradient(to right, #ff5277, #ff7a3d);
+}
 
 .success_email {
     font-weight: 700;
     color: var(--Blue-800);
+}
+
+@media only screen and (min-width: 62rem) {
+    .card_container {
+        flex-direction: row;
+        align-items: center;
+        min-width: 60em;
+        max-height: 40em;
+        border-radius: 1.5em;
+    }
+
+    .card_content {
+        padding: 0 3em 0 3em;
+    }
+
+    .card_title {
+        font-size: 3.5em;
+    }
+
+    .card_image {
+        object-fit: cover;
+        order: 2;
+    }
+
+    .success_container {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--White);
+        border-radius: 2em;
+        min-height: 32em;
+
+        padding: 3em;
+    }
+
+    .success_message-wrapper {
+        width: 100%;
+        max-width: 25rem;
+        margin: 0 auto;
+    }
+
+    .success_title {
+        font-size: 3rem;
+    }
+
+    .success_text {
+        margin-bottom: 2em;
+    }
+
+    .dismiss_btn {
+        padding: 1.5em;
+    }
+}
+
+@media only screen and (min-width: 48rem) and (max-width: 61.938rem) {
+    .card_container {
+        width: 80%;
+        border-radius: 1em;
+
+        max-height: fit-content;
+    }
+
+    .card_content {
+        padding: 2em;
+        border-radius: 1em;
+    }
+
+    .success_container {
+        min-height: 40em;
+        width: 60%;
+        border-radius: 1em;
+    }
+
+    .success_message-wrapper {
+        margin-top: auto;
+        margin-bottom: auto;
+        padding: 2.5em;
+    }
+
+    .dismiss_btn {
+        margin-bottom: 1em;
+    }
+
 }
 
 /* Hidden Class */

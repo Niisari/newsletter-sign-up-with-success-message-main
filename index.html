@@ -64,9 +64,10 @@
       </ul>
       </div>
     <!-- Sign-up form start -->
-      <form id="card_form" novalidate>
-          <span class="email_invalid hidden">Valid email required</span>
-          <label for="email" class="card_label">Email address</label>
+      <form id="card_form">
+        <div class="label_wrapper">
+          <label for="email" class="card_label">Email address</label><span class="email_invalid">Valid email required</span>
+        </div>
           <input 
           type="email" 
           id="email" 
