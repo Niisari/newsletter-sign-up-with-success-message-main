@@ -272,6 +272,14 @@ body {
         margin: 0 auto;
     }
 
+    #card_form {
+        margin-bottom: 0;
+    }
+
+    .card_info {
+        margin-bottom: 1.2em;
+    }
+
     .success_title {
         font-size: 3rem;
     }
