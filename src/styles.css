@@ -1,0 +1,219 @@
+/* Fonts */
+@font-face {
+    font-family: 'Roboto';
+    font-display: swap;
+    src: url('../assets/fonts/Roboto-Regular.ttf') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+
+    font-family: 'Roboto';
+    font-display: swap;
+    src: url('../assets/fonts/Roboto-Bold.ttf') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+/* Custom Colors */
+:root {
+    --Red: hsl(4, 100%, 67%);
+    --Blue-800: hsl(234, 29%, 20%);
+    --Blue-700: hsl(235, 18%, 26%);
+    --Grey: hsl(0, 0%, 58%);
+    --White: hsl(0, 0%, 100%);
+}
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+/* Containers Styles */
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.card_container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 37.5rem;
+    height: 100svh;
+}
+
+.hero_image {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Card Content Styles */
+.card_content {
+    padding: 1.8em 1.8em 0 1.8em;
+}
+
+.card_info {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-bottom: 1.8em;
+}
+
+.card_title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--Blue-800);
+}
+
+.card_text {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--Blue-700);
+    margin-bottom: 0.5em;
+}
+
+/* List Styles */
+.card_list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+    margin-bottom: 1.8em;
+}
+
+.card_list-text {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--Blue-700);
+}
+
+.card_list, .li {
+    position: relative;
+    padding-left: 1.4em;
+    list-style: none;
+}
+
+.li::before {
+    content: url('../assets/images/icon-list.svg');
+    position: absolute;
+    top: 0;
+    left: -1em;
+
+    width: 21px;
+    height: 21px;
+}
+
+/* Form Styles */
+#card_form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-bottom: 1.8em;
+}
+
+.card_input {
+    padding: 1.2em;
+    font-size: 1rem;
+    border-radius: 0.5em;
+    border: 1px solid var(--Grey);
+    outline: none;
+    margin-bottom: 1em;
+}
+
+.card_label {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--Blue-800);
+}
+
+.card_input::placeholder {
+    color: var(--Grey);
+    font-weight: 400;
+}
+
+.email_invalid {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--Red);
+}
+
+#subscribe_btn {
+    padding: 1.2em;
+    border-radius: 0.5em;
+    border: none;
+    background-color: var(--Blue-800);
+    color: var(--White);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#subscribe_btn:hover {
+    background-color: var(--Red);
+}
+
+/* Mobile Card Success Styles */
+
+.success_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* pushes button to bottom */
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.success_message-wrapper {
+    margin-top: 8em;
+    margin-bottom: auto;
+    width: 100%;
+    max-width: 37.5rem;
+}
+
+.success_icon {
+    margin-bottom: 2.7em;
+}
+
+.success_title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--Blue-800);
+
+    margin-bottom: 0.65em;
+}
+
+.success_text {
+    color: var(--Blue-700);
+}
+
+.dismiss_btn {
+    width: 100%;
+    padding: 1.4em;
+    border-radius: 0.5em;
+    border: none;
+    background-color: var(--Blue-800);
+    color: var(--White);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+.success_email {
+    font-weight: 700;
+    color: var(--Blue-800);
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
+
+/* Footer Styles */
+.attribution {
+    display: none;
+}
+
+.attribution a {
+    text-decoration: none;
+    color: var(--Red);
+}

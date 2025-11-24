@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <!-- Fonts -->
+  <link 
+  rel="preload" 
+  href="./assets/fonts/Roboto-Regular.ttf"
+  as="font"
+  type="font/woff2"
+  crossorigin>
+  <link 
+  rel="preload" 
+  href="./assets/fonts/Roboto-Bold.ttf"
+  as="font"
+  type="font/woff2"
+  crossorigin>
+  <!-- Styles -->
+  <link rel="stylesheet" href="./src/styles.css">
+  <link rel="stylesheet" href="./src/reset.css"> 
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+</head>
+
+<body>
+
+ <main class="main">
+   <section class="card_container">
+      <picture class="card_image">
+        <source 
+        media="(min-width: 62rem)" 
+        srcset="./assets/images/illustration-sign-up-desktop.svg">
+        <source
+        media="(min-width: 48rem)"
+        srcset="./assets/images/illustration-sign-up-tablet.svg">
+        <img 
+        src="./assets/images/illustration-sign-up-mobile.svg" 
+        alt="illustration-sign-up-mobile"
+        class="hero_image">
+      </picture>
+    <div class="card_content">
+      <div class="card_info">
+      <h1 class="card_title">Stay updated!</h1>
+      <p class="card_text">Join 60,000+ product managers receiving monthly updates on:</p>
+
+      <ul class="card_list">
+        <li class="li">
+          <span class="card_list-text">
+            Product discovery and building what matters
+          </span>
+        </li>
+        <li class="li">
+          <span class="card_list-text">
+            Measuring to ensure updates are a success
+          </span>
+        </li>
+        <li class="li">
+          <span class="card_list-text">
+            And much more!
+          </span>
+        </li>
+      </ul>
+      </div>
+    <!-- Sign-up form start -->
+      <form id="card_form" novalidate>
+          <span class="email_invalid hidden">Valid email required</span>
+          <label for="email" class="card_label">Email address</label>
+          <input 
+          type="email" 
+          id="email" 
+          name="email"
+          placeholder="email@company.com"
+          class="card_input"
+          required>
+          <button 
+          type="submit" 
+          id="subscribe_btn">
+          Subscribe to monthly newsletter
+        </button>
+      </form>
+    </div>
+  </section>
+    <!-- Sign-up form end -->
+
+    <!-- Success message start -->
+  <section class="success_container hidden">
+    <div class="success_message-wrapper">
+      <img 
+      src="./assets/images/icon-success.svg" 
+      alt=""
+      class="success_icon">
+      <h1 class="success_title">Thanks for subscribing!</h1>
+      <p class="success_text">
+        A confirmation email has been sent to <span class="success_email">ash@loremcompany.com</span>. 
+        Please open it and click the button inside to confirm your subscription.
+      </p>
+    </div>
+    <button type="button" class="dismiss_btn">Dismiss message</button>
+  </section>
+    <!-- Success message end -->
+ </main>
+  <!-- Footer -->
+   <div class="attribution">
+    <footer>
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://www.frontendmentor.io/profile/Niisari" target="_blank">Yushi</a>.
+    </footer>
+   </div>
+  <!-- JS Script -->
+  <script src="./src/script.js"></script>
+</body>
+</html>
