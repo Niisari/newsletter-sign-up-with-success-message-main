@@ -254,6 +254,8 @@ body {
     .card_image {
         object-fit: cover;
         order: 2;
+
+        margin-right: 1.7em;
     }
 
     .success_container {
